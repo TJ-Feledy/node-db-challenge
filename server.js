@@ -22,7 +22,7 @@ server.post('/api/projects', (req, res) => {
 
   Projects.addProject(projectData)
     .then(newProject => {
-      res.json(newProject)
+      res.status(201).json(newProject)
     })
     .catch(err => {
       res.status(500).json({ errorMessage: `${err}` })
@@ -45,7 +45,7 @@ server.post('/api/projects/resources', (req, res) => {
 
   Projects.addResource(resourceData)
     .then(newResource => {
-      res.json(newResource)
+      res.status(201).json(newResource)
     })
     .catch(err => {
       res.status(500).json({ errorMessage: `${err}` })
@@ -68,7 +68,7 @@ server.post('/api/projects/tasks', (req, res) => {
 
   Projects.addTask(taskData)
     .then(newTask => {
-      res.json(newTask)
+      res.status(201).json(newTask)
     })
     .catch(err => {
       res.status(500).json({ errorMessage: `${err}` })

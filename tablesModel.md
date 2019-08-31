@@ -8,19 +8,19 @@ Schema:
 - projects:
   - id
   - project_name: Required
-  - description
+  - project_description
   - completed: true/false (default = false)
 
 - resources: (person, place, tool, ect...)
   - id
   - resource_name: Required
-  - description
+  - resource_description
 
 - tasks:
   - id
   - project_id
-  - task: Required
-  - notes
+  - task_name: Required
+  - task_notes
   - completed: true/false (default = false)
 
 - project_resources:

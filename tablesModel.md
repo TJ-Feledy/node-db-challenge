@@ -6,18 +6,23 @@ Relationships:
 
 Schema:
 - projects:
-  - primary key
+  - id
   - project_name: Required
   - description
   - completed: true/false (default = false)
 
 - resources: (person, place, tool, ect...)
-  - primary key
+  - id
   - resource_name: Required
   - description
 
 - tasks:
-  - primary key
+  - id
+  - project_id
   - task: Required
   - notes
   - completed: true/false (default = false)
+
+- project_resources:
+  - project_id
+  - resource_id

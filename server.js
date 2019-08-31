@@ -1,6 +1,6 @@
 const express = require('express');
 
-const Projects = require('./recipes/project-model.js');
+const Projects = require('./projects/projects-model.js');
 
 const server = express();
 
@@ -8,7 +8,7 @@ server.use(express.json());
 
 server.get('/api/projects', (req, res) => {
 
-  Projects.getProject()
+  Projects.getProjects()
     .then(projects => {
       res.json(projects)
     })

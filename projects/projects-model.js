@@ -22,3 +22,15 @@ function getTasks() {
     .join('projects as p', 'p.id', 't.project_id')
     .select('t.id', 'p.project_name', 'p.project_description', 't.task_name', 't.completed')
 }
+
+function addProject(project) {
+  return db('projects').insert(project)
+}
+
+function addResource(resource) {
+  return db('resources').insert(resource)
+}
+
+function addTask(task) {
+  return db('tasks').insert(task)
+}

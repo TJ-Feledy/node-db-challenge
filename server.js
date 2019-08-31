@@ -10,6 +10,14 @@ server.get('/api/projects', (req, res) => {
 
   Projects.getProjects()
     .then(projects => {
+      projects.forEach(project => {
+        if(project.completed === 0) {
+          project.completed = false
+        }
+        else if (project.completed === 1) {
+          project.completed = true
+        }
+      })
       res.json(projects)
     })
     .catch(err => {
@@ -56,6 +64,14 @@ server.get('/api/projects/tasks', (req, res) => {
 
   Projects.getTasks()
     .then(tasks => {
+      tasks.forEach(task => {
+        if (task.completed === 0) {
+          task.completed = false
+        }
+        else if (task.completed === 1) {
+          task.completed = true
+        }
+      })
       res.json(tasks)
     })
     .catch(err => {

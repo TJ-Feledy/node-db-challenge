@@ -4,19 +4,21 @@
   "description": "Node-Sprint-Challenge",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "server": "nodemon index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TJ-Feledy/node-db-challenge.git"
   },
-  "author": "TJ",
+  "author": "Lambda School",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/TJ-Feledy/node-db-challenge/issues"
   },
   "homepage": "https://github.com/TJ-Feledy/node-db-challenge#readme",
   "dependencies": {
+    "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "nodemon": "^1.19.1",
     "sqlite3": "^4.1.0"
